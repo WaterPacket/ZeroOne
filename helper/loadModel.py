@@ -31,7 +31,7 @@ def load_model():
         X = df_processed[FEATURE_NAMES]
         y = df_processed['target_final_score']
 
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=30)
         print(f"Training data size: {len(X_train)}")
 
         model = RandomForestRegressor(n_estimators=500, max_depth=10, random_state=42, n_jobs=-1)
