@@ -6,7 +6,7 @@ from helper.session_limits import session_limits
 def predict_match_final_score(currentBallID, currentRuns, currentWicket, last_balls_string, model, feature_names, session):
     TOTAL_BALLS_IN_T20 = 120
 
-    session = session.lower().strip()
+    session = session.lower().strip()[0]
     target_ball = session_limits.get(session, 120)
 
     # If overs for this session already completed

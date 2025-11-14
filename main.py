@@ -27,7 +27,7 @@ async def root():
 
 @app.post("/predictScore")
 async def get_predicted_score(req: ApiRequest):
-    print("📦 Incoming request body:", req)
+    print("📦 Incoming Request Body:", req)
 
     final_score_prediction = predict_match_final_score(
         currentBallID=req.currentBallId,
@@ -38,5 +38,5 @@ async def get_predicted_score(req: ApiRequest):
         feature_names=FEATURE_NAMES,
         session=req.session,
     )
-
+    print("📦 Outgoing Predicted Score:", final_score_prediction)
     return {"predicted_score": final_score_prediction}

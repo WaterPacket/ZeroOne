@@ -9,9 +9,9 @@ match = 'dummy_match'
 session = 'd'
 
 #currentRuns, currentWicket, currentBallID, last_balls_string = get_live_score(series=series,match=match, session=session)
-currentBallID = 36
-currentRuns = 55
-currentWicket = 0
+currentBallID = 51
+currentRuns = 46
+currentWicket = 2
 last_balls_string = "4 4 0 6 1 4"
 
 model, FEATURE_NAMES = load_model()
