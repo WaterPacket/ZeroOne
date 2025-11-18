@@ -1,7 +1,7 @@
-# main.py
 from typing import List
 from fastapi import FastAPI
 from pydantic import BaseModel
+from functools import lru_cache
 
 from helper.loadModel import load_model
 from helper.predictor import predict_match_final_score
@@ -16,8 +16,10 @@ class ApiRequest(BaseModel):
     lastBalls: List[str]
     session: str
 
-
-model, FEATURE_NAMES = load_model()
+@lru_cache
+def get_model():
+    print("🔄 Loading ML Model...")
+    return load_model()
 
 
 @app.get("/")
@@ -28,6 +30,8 @@ async def root():
 @app.post("/predictScore")
 async def get_predicted_score(req: ApiRequest):
     print("📦 Incoming Request Body:", req)
+
+    model, FEATURE_NAMES = get_model()
 
     final_score_prediction = predict_match_final_score(
         currentBallID=req.currentBallId,
