@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+pandas
+joblib
+scikit-learn
+requests
+selenium
+numpy
+pydantic
+webdriver-manager
