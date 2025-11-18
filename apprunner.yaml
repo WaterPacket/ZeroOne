@@ -6,4 +6,4 @@ build:
 run:
   command: uvicorn main:app --host 0.0.0.0 --port $PORT
   network:
-    port: 7070
+    port: 8080
