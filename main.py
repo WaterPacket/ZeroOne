@@ -6,6 +6,14 @@ from functools import lru_cache
 from helper.loadModel import load_model
 from helper.predictor import predict_match_final_score
 
+import os
+
+print("FILES IN /app:")
+print(os.listdir("/app"))
+print("FILES IN /app/models:", os.listdir("/app/models") if os.path.exists("/app/models") else "No models folder")
+print("FILES IN /app/data:", os.listdir("/app/data") if os.path.exists("/app/data") else "No data folder")
+
+
 app = FastAPI(title="Score Prediction API", version="1.0")
 
 
