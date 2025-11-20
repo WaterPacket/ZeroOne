@@ -1,7 +1,6 @@
 from typing import List
 from fastapi import FastAPI
 from pydantic import BaseModel
-from functools import lru_cache
 
 from helper.loadModel import load_model
 from helper.predictor import predict_match_final_score
