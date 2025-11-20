@@ -21,6 +21,11 @@ class ApiRequest(BaseModel):
 async def root():
     return {"message": "Ping from Score Prediction API"}
 
+@app.get("/health")
+def health_check():
+    return {"status": "ok"}
+
+
 
 @app.post("/predictScore")
 async def get_predicted_score(req: ApiRequest):
