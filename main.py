@@ -24,10 +24,6 @@ class ApiRequest(BaseModel):
     lastBalls: List[str]
     session: str
 
-@lru_cache
-def get_model():
-    print("🔄 Loading ML Model...")
-    return load_model()
 
 
 @app.get("/")
@@ -39,7 +35,7 @@ async def root():
 async def get_predicted_score(req: ApiRequest):
     print("📦 Incoming Request Body:", req)
 
-    model, FEATURE_NAMES = get_model()
+    model, FEATURE_NAMES = load_model()
 
     final_score_prediction = predict_match_final_score(
         currentBallID=req.currentBallId,
