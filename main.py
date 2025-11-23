@@ -23,7 +23,7 @@ async def root():
 
 @app.get("/health")
 def health_check():
-    return {"status": "ok"}
+    return {"message": "Ping from Score Prediction API"}
 
 
 
