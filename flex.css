@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*    <div class="header">HEADER</div>
+    <div class="mid">
+    <div class="sidebar">SIDEBAR</div>
+    <div class="content">CONTENT</div>
+    </div> */
+    .body{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    .header,.footer{
+        flex-basis: 1fr;
+        color: white;
+        background-color: rgb(119, 13, 219);
+    }
+    .mid{
+        
+        display: flex; 
+        flex-direction: row;
+
+    }
+    .sidebar,.content{
+        flex-basis: 1;
+        color: white;
+        background-color: rgb(119, 13, 219);
+    }

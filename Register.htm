@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Registration Form</legend>
+
+   
+    <form action="">
+        <table>
+            <tr>
+                <td>
+                    <label for="Name" >Name:</label>
+                </td>
+                <td><input type="text" name="Name" id="Name" placeholder="Enter your name"></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">Email:</label>
+                </td>
+                <td><input type="email" name="email" id="email" placeholder="Enter email id"></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Password">Password:</label>
+                </td>
+                <td><input type="password" name="Password" id="Password" placeholder="Enter Password"></td>
+            </tr>
+            <tr>
+                <td><label for="Dob">Date of Birth:</label></td>
+                
+                <td> <input type="date" name="Dob" id="Dob"></td>
+            </tr>
+            <tr>
+                <td><label for="Gender">Gender:</label></td>
+                <td><input type="radio" name="Gender" id="Gender" value="Male">Male</td>
+                </tr>
+                <tr>
+                    <td></td> 
+                    <td><input type="radio" name="Gender" id="Gender" value="Female">Female</td>                    
+                </tr>
+                <tr> 
+                    <td></td>
+                    <td><input type="radio" name="Gender" id="Gender" value="Other">Other</td>                
+                </tr>                    
+            <tr>
+                <td><label for="Course" id="Course">Select Course:</label></td>
+                <td><select name="Course" id="Course">
+                    <option value="--SELECT--">--SELECT--</option>
+                    <option value="CSE">CSE</option>
+                    <option value="ECE">ECE</option>
+                    <option value="EEE">EEE</option>
+                </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Photo">Upload Photo:</label>
+                </td>
+                <td>
+                    <input type="file" name="Photo" id="Photo">
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="Terms" id="Terms">I agree to the terms and conditions</td>
+                
+            </tr>
+            <tr>
+                <td><input type="button" value="Submit" placeholder="Submit"></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Comment">Comments:</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <textarea name="Comment" id="Comment" rows="10" cols="40"></textarea>
+                </td>
+            </tr>
+        </table>
+        
+  
+    </form>
+    </fieldset>
+</body>
+</html>
